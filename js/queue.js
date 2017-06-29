@@ -21,15 +21,15 @@ const Queue = function(i) {
     };
 
     this.enqueue = function(n) {
-		if(!R.isEmpty(n)){
-			if (this.isFull()) {
-				array = R.concat(array, R.repeat(null, i || 20));
-			}
+        if(!R.isEmpty(n)){
+            if (this.isFull()) {
+                array = R.concat(array, R.repeat(null, i || 20));
+            }
 
-			array[tail] = n;
-			tail++;
-			size++;
-		}
+            array[tail] = n;
+            tail++;
+            size++;
+        }
     };
 
     this.dequeue = function() {
