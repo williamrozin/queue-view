@@ -1,5 +1,5 @@
-const Queue = function(i = 20) {
-    var array = R.repeat(null, i);
+const Queue = function(i) {
+    var array = R.repeat(null, i || 20);
     var head = 0;
     var tail = 0;
     var size = 0;
@@ -21,7 +21,7 @@ const Queue = function(i = 20) {
     };
 
     this.enqueue = function(n) {
-        if (!this.isFull()) {
+        if (!this.isFull() && !R.isEmpty(n)) {
             array[tail] = n;
 
             if(array.length > 1) {

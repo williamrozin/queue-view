@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trabalhando com Filas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <section id="fh5co-home" data-section="home" style="background-image: url(images/penguins.jpg);" data-stellar-background-ratio="0.5">
+        <div class="gradient"></div>
+        <div class="container">
+            <div class="text-wrap">
+                <div class="text-inner">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center " style=" padding: 20px;">
+                        <h1 class="to-animate">Operações<span></span></h1>
+                            <div class="call-to-action" style="padding: 10px;">
+                                <div class="text-inner">
+                                    <div class="row" >
+                                          <div class="form-group">
+                                            <input type="number" id="input-init" type="text" class="form-control" placeholder="20">
+                                          </div>
+                                          <button id="init" type="submit" class="btn btn-default">Inicializar</button>
+                                    </div>
+                                </div>
+                                <div class="text-inner">
+                                    <div class="row" style="margin-left: 20px;">
+                                          <div class="form-group">
+                                            <input type="number" id="input-enqueue" type="text" class="form-control" placeholder="0">
+                                          </div>
+                                          <button id="enqueue" type="submit" class="btn btn-default">Enqueue</button>
+                                    </div>
+                                </div>
+                                <div class="text-inner">
+                                    <div class="row" style="margin-left: 20px;">
+                                          <div class="form-group">
+                                            <input type="number" disabled id="input-dequeue" type="text" class="form-control" placeholder="0">
+                                          </div>
+                                          <button id="dequeue" type="submit" class="btn btn-default">Dequeue</button>
+                                    </div>
+                                </div>
+                                <div class="text-inner">
+                                    <div class="row" style="margin-left: 20px;">
+                                          <div class="form-group">
+                                            <input type="number" id="input-front" disabled type="text" class="form-control" placeholder="0">
+                                          </div>
+                                          <button id="front" type="submit" class="btn btn-default">Front</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2 text-center" style="padding: 20px;">
+                            <div style="font-size: 28px; margin-bottom: 24px;">Fila</div>
+                            <center>
+                                <div id="queue-view">
+                                    Não há nada aqui
+                                </div>
+                            </center>
+                        </div>      
+                    </div>
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <p class="copyright text-center">
+                                &copy; 2017 <a href="http://www.univille.br">Univille</a>, Desenvolvido para a matéria de Estrutura de Dados pelos alunos de Sistemas de Informação.
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+                
+            </div>
+            
+        </div>  
+        
+    </section>
+                
+    <!-- Main JS (Do not remove) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.24.1/ramda.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/queue.js"></script>
+    </body>
+</html>
+
