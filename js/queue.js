@@ -13,7 +13,7 @@ const Queue = function(i) {
     };
 
     this.isFull = function() {
-        return this.size() === array.length;
+        return tail === array.length - 1;
     };
 
     this.front = function() {
