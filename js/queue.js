@@ -24,7 +24,8 @@ const Queue = function(q) {
     this.enqueue = function(n) {
         if(!R.isEmpty(n)){
             if (this.isFull()) {
-                var temp = R.repeat(null, length * 2);
+                length = length * 2;
+                var temp = R.repeat(null, length);
                 var i = 0;
                 
                 for (i = 0; i < array.length; i++) {
