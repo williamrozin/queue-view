@@ -1,19 +1,20 @@
-const Queue = function(i) {
-    var array = R.repeat(null, i || 20);
+const Queue = function(q) {
+    var length = q || 20;
+    var array = R.repeat(null, length);
     var head = 0;
     var tail = 0;
     var size = 0;
 
-    this.size = function () {
+    this.getSize = function () {
         return size;
     };
 
     this.isEmpty = function() {
-        return this.size() === 0;
+        return this.getSize() === 0;
     };
 
     this.isFull = function() {
-        return tail === array.length;
+        return this.getSize() === array.length;
     };
 
     this.front = function() {
@@ -23,11 +24,21 @@ const Queue = function(i) {
     this.enqueue = function(n) {
         if(!R.isEmpty(n)){
             if (this.isFull()) {
-                array = R.concat(array, R.repeat(null, i || 20));
+                var temp = R.repeat(null, length * 2);
+                var i = 0;
+                
+                for (i = 0; i < array.length; i++) {
+                    temp[i] = array[head];
+                    head = (head + 1) % array.length;
+                }
+
+                head = 0;
+                tail = array.length;
+                array = temp;
             }
 
             array[tail] = n;
-            tail++;
+            tail = (tail + 1) % array.length;
             size++;
         }
     };
@@ -37,9 +48,7 @@ const Queue = function(i) {
             const aux = array[head];
             array[head] = null;
 
-            if (array.length > 1) {
-                head++;
-            }
+            head = (head + 1) % array.length;
 
             size--;
             return aux;
